@@ -1,0 +1,6 @@
+[local]
+18.9.72.17
+
+[local:vars]
+ansible_user=rod
+ansible_ssh_common_args='-o StrictHostKeyChecking=no'
