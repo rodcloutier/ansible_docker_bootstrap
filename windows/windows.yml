@@ -1,0 +1,16 @@
+---
+- name: testing windows module
+  hosts: windows
+
+  tasks:
+    - name: run ipconfig
+      raw: ipconfig
+      register: ipconfig
+
+    - debug: var=ipconfig
+
+    - name: test stat module on file
+      win_stat: path="C:/Windows/win.ini"
+      register: stat_file
+
+    - debug: var=stat_file
